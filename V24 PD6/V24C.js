@@ -972,6 +972,20 @@ Annual Anime Grand Prix.`,
     stringGenres: ["action"],
   },
 ];
+function highScore(data) {
+  console.log("Movies with a score above 8:");
+  data
+    .filter((movie) => movie.score > 8)
+    .forEach((movie) => console.log(movie.title));
+}
+highScore(data);
+function actionPacked(data) {
+  console.log("Action Movies:");
+  data
+    .filter((movie) => movie.stringGenres.includes("action"))
+    .forEach((movie) => console.log(movie.title));
+}
+actionPacked(data);
 // 1)While chaining array methods, print the name of each movie that has a score above 8.0
 
 // 2) While chaining array methods, print the name of each anime that "includes" the genre action
